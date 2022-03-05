@@ -17,8 +17,6 @@ Run below commands:
 ```bash
    npm install -g @sanity/cli
    sanity init --coupon cleverprogrammer
-
-   npx next dev -p 4000
 ```
 
 To run the application:
