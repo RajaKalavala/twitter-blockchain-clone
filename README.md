@@ -2,13 +2,27 @@
 
 ## Setup Steps
 
-1. Create Next.js App -> npx create-next-app --example with-tailwindcss twitter-blockchain-clone
+1. Create Next.js App:
+
+```bash
+   npx create-next-app --example with-tailwindcss twitter-blockchain-clone
+```
+
 2. Setup Sanity:
 
-a. Go to -> https://www.sanity.io/cleverprogrammer
-b. Run below commands:
+https://www.sanity.io/cleverprogrammer
+
+Run below commands:
 
 ```bash
    npm install -g @sanity/cli
    sanity init --coupon cleverprogrammer
+
+   npx next dev -p 4000
+```
+
+To run the application:
+
+```bash
+   npx next dev -p 4000
 ```
