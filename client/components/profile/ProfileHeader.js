@@ -20,11 +20,37 @@ const style = {
 
 const ProfileHeader = () => {
   const router = useRouter()
+  const isProfileImageNft = false
+
   return (
     <div className={style.wrapper}>
       <div className={style.header}>
         <div onClick={() => router.push('/')} className={style.backButton}>
           <BsArrowLeftShort />
+        </div>
+        <div className={style.details}>
+          <div className={style.primary}>Raja</div>
+          <div className={style.secondary}>8 Tweets</div>
+        </div>
+      </div>
+      <div>
+        <img
+          src="https://www.2prosinside.com/wp-content/uploads/2022/01/best-gaming-pc-under-600-1500x500.jpg"
+          alt="cover"
+          className={style.coverPhoto}
+        ></img>
+      </div>
+      <div className={style.profileImageContainer}>
+        <div
+          className={isProfileImageNft ? 'hex' : style.profileImageContainer}
+        >
+          <img
+            src="https://media-exp1.licdn.com/dms/image/C5603AQG0CeEcQRy1ng/profile-displayphoto-shrink_200_200/0/1613901896297?e=1647475200&v=beta&t=vtTHn0F2IShhLXvON_ErObm2DiSIrSYgGCyALGASHis"
+            alt="Raja"
+            className={
+              isProfileImageNft ? style.profileImageNft : style.profileImage
+            }
+          ></img>
         </div>
       </div>
     </div>
