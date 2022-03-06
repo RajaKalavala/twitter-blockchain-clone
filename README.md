@@ -31,3 +31,11 @@ Web3 Setup Requirement:
 
 1. MetaMask
 2. Alchemy
+
+Smart-Contract Commands:
+
+```bash
+   npm install hardhat
+   npx hardhat compile
+   npx hardhat run scripts/deploy.js --network rinkeby
+```
