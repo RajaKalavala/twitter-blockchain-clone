@@ -24,3 +24,5 @@ To run the application:
 ```bash
    npx next dev -p 4000
 ```
+
+Shortcut to add component template -> rafce
