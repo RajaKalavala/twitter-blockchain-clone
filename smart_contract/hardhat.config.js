@@ -5,7 +5,9 @@ module.exports = {
   networks: {
     rinkeby: {
       url: "",
-      accounts: [""],
+      accounts: [
+        "c8a07b42550504251beb64faa0c282e68ff6d5869b749fb5fbc996dd39bbe3bb",
+      ],
     },
   },
 };
