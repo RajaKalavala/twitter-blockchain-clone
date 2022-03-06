@@ -82,7 +82,11 @@ function Sidebar({ initialSelectedIcon = 'Home' }) {
           setSelected={setSelected}
           redirect={'/profile'}
         />
-        <SidebarOption Icon={CgMoreO} text="More"></SidebarOption>
+        <SidebarOption
+          Icon={CgMoreO}
+          text="More"
+          setSelected={{ setSelected }}
+        ></SidebarOption>
         <div className={style.tweenButton}>Mint</div>
       </div>
       <div className={style.profileButton}>
