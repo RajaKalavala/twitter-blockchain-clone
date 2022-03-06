@@ -1,4 +1,9 @@
 import React from 'react'
+import { BsFillPatchCheckFill } from 'react-icons/bs'
+import { FaRegComment, FaRetweet } from 'react-icons/fa'
+import { FiShare } from 'react-icons/fi'
+import { format } from 'timeago.js'
+import { AiOutlineHeart } from 'react-icons/ai'
 
 const style = {
   wrapper: `flex p-3 border-b border-[#38444d]`,
@@ -34,6 +39,45 @@ const Post = ({
               : style.profileImage
           }
         ></img>
+      </div>
+      <div className={style.postMain}>
+        <div>
+          <span className={style.headerDetails}>
+            <span className={style.name}>{displayName}</span>
+            {isProfileImageNft && (
+              <span>
+                <BsFillPatchCheckFill />
+              </span>
+            )}
+
+            <span className={style.handleAndTimeAgo}>
+              @{userName} . {format(new Date(timestamp).getTime())}
+            </span>
+          </span>
+          <div className={style.tweet}>{text}</div>
+        </div>
+        <div className={style.footer}>
+          <div
+            className={`${style.footerIcon} hover:bg-[#1e364a] hover:text-[#1d9bf0]`}
+          >
+            <FaRegComment />
+          </div>
+          <div
+            className={`${style.footerIcon} hover:bg-[#1b393b] hover:text-[#03ba7c]`}
+          >
+            <FaRetweet />
+          </div>
+          <div
+            className={`${style.footerIcon} hover:bg-[#39243c] hover:text-[#f91c80]`}
+          >
+            <AiOutlineHeart />
+          </div>
+          <div
+            className={`${style.footerIcon} hover:bg-[#1e364a] hover:text-[#1d9bf0]`}
+          >
+            <FiShare />
+          </div>
+        </div>
       </div>
     </div>
   )
