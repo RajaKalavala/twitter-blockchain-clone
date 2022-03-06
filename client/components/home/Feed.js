@@ -55,7 +55,15 @@ function Feed() {
       </div>
       <TweetBox />
       {tweets.map((tweet, index) => (
-        <Post />
+        <Post
+          key={index}
+          displayName={tweet.displayName}
+          userName={tweet.userName}
+          avatar={tweet.avatar}
+          text={tweet.text}
+          isProfileImageNft={tweet.isProfileImageNft}
+          timestamp={tweet.timestamp}
+        />
       ))}
     </div>
   )
