@@ -31,6 +31,19 @@ function Sidebar() {
         <div>Lists</div>
         <div>Profile</div>
         <div>More</div>
+        <div className={style.tweenButton}>Mint</div>
+      </div>
+      <div className={style.profileButton}>
+        <div className={style.profileLeft}></div>
+        <div className={style.profileRight}>
+          <div className={style.details}>
+            <div className={style.name}>Raja</div>
+            <div className={style.handle}>@something</div>
+          </div>
+          <div className={style.moreContainer}>
+            <FiMoreHorizontal />
+          </div>
+        </div>
       </div>
     </div>
   )
