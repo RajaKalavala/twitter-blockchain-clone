@@ -26,3 +26,8 @@ To run the application:
 ```
 
 Shortcut to add component template -> rafce
+
+Web3 Setup Requirement:
+
+1. MetaMask
+2. Alchemy
