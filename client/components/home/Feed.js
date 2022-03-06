@@ -1,4 +1,5 @@
 import { BsStars } from 'react-icons/bs'
+import TweetBox from '../home/TweenBox'
 
 const style = {
   wrapper: `flex-[2] border-r border-l border-[#38444d]`,
@@ -7,8 +8,12 @@ const style = {
 }
 function Feed() {
   return (
-    <div>
-      <h2>Feed</h2>
+    <div className={style.wrapper}>
+      <div className={style.header}>
+        <div className={style.headerTitle}>Home</div>
+        <BsStars />
+      </div>
+      <TweetBox />
     </div>
   )
 }
