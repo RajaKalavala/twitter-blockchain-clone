@@ -59,7 +59,9 @@ export const TwitterProvider = ({ children }) => {
   }
 
   return (
-    <TwitterContext.Provider value={{ appStatus, currentAccount, conn }}>
+    <TwitterContext.Provider
+      value={{ appStatus, currentAccount, connectWallet }}
+    >
       {children}
     </TwitterContext.Provider>
   )
