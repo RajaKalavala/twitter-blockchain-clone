@@ -49,7 +49,8 @@ export const TwitterProvider = ({ children }) => {
 
       if (addressArray.length > 0) {
         setCurrentAccount(addressArray[0])
-        createUserAccount(addressArray[0])
+        setAppStatus('connected')
+        //createUserAccount(addressArray[0])
       } else {
         router.push('/')
         setAppStatus('notConnected')
