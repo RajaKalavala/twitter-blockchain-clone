@@ -16,7 +16,7 @@ const style = {
 }
 
 export default function Home() {
-  const { appStatus, connectToWallet } = useContext(TwitterContext)
+  const { appStatus, connectWallet } = useContext(TwitterContext)
 
   const app = (status = appStatus) => {
     switch (status) {
