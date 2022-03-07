@@ -6,6 +6,7 @@ export const TwitterContext = createContext()
 export const TwitterProvider = ({ children }) => {
   const [appStatus, setAppStatus] = useState('loading')
   const [currentAccount, setCurrentAccount] = useState('')
+  const router = useRouter()
 
   useEffect(() => {
     checkIfWalletIsConnected()
