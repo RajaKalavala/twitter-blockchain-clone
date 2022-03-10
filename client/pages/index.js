@@ -91,5 +91,5 @@ export default function Home() {
     </div>
   )
 
-  return <div className={style.wrapper}>{app('connected')}</div>
+  return <div className={style.wrapper}>{app(appStatus)}</div>
 }
