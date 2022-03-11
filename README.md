@@ -38,4 +38,5 @@ Smart-Contract Commands:
    npm install hardhat
    npx hardhat compile
    npx hardhat run scripts/deploy.js --network rinkeby
+   sanity start
 ```
