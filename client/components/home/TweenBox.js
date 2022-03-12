@@ -27,7 +27,7 @@ const style = {
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState('')
-  const { currentAccount } = useContext(TwitterContext)
+  const { currentAccount, currentUser, tweets } = useContext(TwitterContext)
 
   const postTweet = async (event) => {
     event.preventDefault()
@@ -70,9 +70,13 @@ function TweetBox() {
     <div className={style.wrapper}>
       <div className={style.tweetBoxLeft}>
         <img
-          src="https://media-exp1.licdn.com/dms/image/C5603AQG0CeEcQRy1ng/profile-displayphoto-shrink_200_200/0/1613901896297?e=1647475200&v=beta&t=vtTHn0F2IShhLXvON_ErObm2DiSIrSYgGCyALGASHis"
+          src={currentUser.profileImage}
           alt="profile image"
-          className={style.profileImage}
+          className={
+            currentUser.isProfileImageNft
+              ? `${style.profileImage} smallHex`
+              : style.profileImage
+          }
         ></img>
       </div>
       <div className={style.tweetBoxRight}>

@@ -1,6 +1,8 @@
 import { BsStars } from 'react-icons/bs'
 import TweetBox from '../home/TweenBox'
 import Post from '../../components/Post'
+import { useContext } from 'react'
+import { TwitterContext } from '../../context/TwitterContext'
 
 const style = {
   wrapper: `flex-[2] border-r border-l border-[#38444d]`,
@@ -8,45 +10,8 @@ const style = {
   headerTitle: `text-xl font-bold`,
 }
 
-const tweets = [
-  {
-    displayName: 'Raja',
-    userName: 'abcdefghijklmanopqrstuvwxyz',
-    avatar:
-      'https://static.toiimg.com/thumb/resizemode-4,msid-76729750,imgsize-249247,width-720/76729750.jpg',
-    text: 'gm',
-    isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00:000Z',
-  },
-  {
-    displayName: 'Raja',
-    userName: 'abcdefghijklmanopqrstuvwxyz',
-    avatar:
-      'https://static.toiimg.com/thumb/resizemode-4,msid-76729750,imgsize-249247,width-720/76729750.jpg',
-    text: 'gm',
-    isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00:000Z',
-  },
-  {
-    displayName: 'Raja',
-    userName: 'abcdefghijklmanopqrstuvwxyz',
-    avatar:
-      'https://static.toiimg.com/thumb/resizemode-4,msid-76729750,imgsize-249247,width-720/76729750.jpg',
-    text: 'gm',
-    isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00:000Z',
-  },
-  {
-    displayName: 'Raja',
-    userName: 'abcdefghijklmanopqrstuvwxyz',
-    avatar:
-      'https://static.toiimg.com/thumb/resizemode-4,msid-76729750,imgsize-249247,width-720/76729750.jpg',
-    text: 'gm',
-    isProfileImageNft: false,
-    timestamp: '2020-06-01T12:00:00:000Z',
-  },
-]
 function Feed() {
+  const { tweets } = useContext(TwitterContext)
   return (
     <div className={style.wrapper}>
       <div className={style.header}>
@@ -57,10 +22,18 @@ function Feed() {
       {tweets.map((tweet, index) => (
         <Post
           key={index}
-          displayName={tweet.displayName}
-          userName={`${tweet.userName.slice(0, 4)}...${tweet.userName.slice(
-            -4
-          )}`}
+          displayName={
+            tweet.author.name === 'Unnamed'
+              ? `${tweet.author.walletAddress.slice(
+                  0,
+                  4
+                )}...${tweet.author.walletAddress.slice(41)}`
+              : tweet.author.name
+          }
+          userName={`${tweet.author.walletAddress.slice(
+            0,
+            4
+          )}...${tweet.author.walletAddress.slice(41)}`}
           avatar={tweet.avatar}
           text={tweet.text}
           isProfileImageNft={tweet.isProfileImageNft}

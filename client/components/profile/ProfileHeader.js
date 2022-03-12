@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
+import { useContext } from 'react'
 import { BsArrowLeftShort } from 'react-icons/bs'
+import { TwitterContext } from '../../context/TwitterContext'
 
 const style = {
   wrapper: `border-[#38444d] border-b`,
@@ -20,8 +22,7 @@ const style = {
 
 const ProfileHeader = () => {
   const router = useRouter()
-  const isProfileImageNft = false
-  const currentAccount = 'thisiscurrentaccountdata'
+  const { currentAccount, currentUser } = useContext(TwitterContext)
 
   return (
     <div className={style.wrapper}>
@@ -30,26 +31,35 @@ const ProfileHeader = () => {
           <BsArrowLeftShort />
         </div>
         <div className={style.details}>
-          <div className={style.primary}>Raja</div>
-          <div className={style.secondary}>8 Tweets</div>
+          <div className={style.primary}>{currentUser.name}</div>
+          <div className={style.secondary}>
+            {currentUser.tweets?.length}{' '}
+            {currentUser.tweets?.length === 1 ? 'Tweet' : 'Tweets'}
+          </div>
         </div>
       </div>
       <div>
         <img
-          src="https://www.2prosinside.com/wp-content/uploads/2022/01/best-gaming-pc-under-600-1500x500.jpg"
+          src={currentUser.currentImage}
           alt="cover"
           className={style.coverPhoto}
         ></img>
       </div>
       <div className={style.profileImageContainer}>
         <div
-          className={isProfileImageNft ? 'hex' : style.profileImageContainer}
+          className={
+            currentAccount.isProfileImageNft
+              ? 'hex'
+              : style.profileImageContainer
+          }
         >
           <img
             src="https://media-exp1.licdn.com/dms/image/C5603AQG0CeEcQRy1ng/profile-displayphoto-shrink_200_200/0/1613901896297?e=1647475200&v=beta&t=vtTHn0F2IShhLXvON_ErObm2DiSIrSYgGCyALGASHis"
             alt="Raja"
             className={
-              isProfileImageNft ? style.profileImageNft : style.profileImage
+              currentAccount.isProfileImageNft
+                ? style.profileImageNft
+                : style.profileImage
             }
           ></img>
         </div>
@@ -57,7 +67,7 @@ const ProfileHeader = () => {
 
       <div className={style.details}>
         <div>
-          <div className={style.primary}>Raja Kalavala</div>
+          <div className={style.primary}>{currentUser.name}</div>
           <div className={style.secondary}>
             {currentAccount && (
               <>
