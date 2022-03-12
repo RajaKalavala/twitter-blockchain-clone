@@ -130,7 +130,7 @@ export const TwitterProvider = ({ children }) => {
         author: {
           name: item.author.name,
           walletAddress: item.author.walletAddress,
-          profileImage: profileImageUrl,
+          profileImage: 'https://avatars.githubusercontent.com/u/45046033?v=4',
           isProfileImageNft: item.author.isProfileImageNft,
         },
       }
