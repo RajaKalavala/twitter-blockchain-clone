@@ -1,6 +1,18 @@
-# This is Twitter Blockchain App
+# Twitter Web3 Blockchain App (Clone)
 
-## Setup Steps
+Hosted Link - https://twitter-web3-clone.vercel.app/
+
+## Steps To Open App
+1. Prerequisite - You should have Metamask account and extension in browser with test crypto available in your wallet
+2. Open above hosted link.
+3. Connect to wallet
+4. Twitter Clone App will be open with your profile linked with your metamask account and your cypto wallet. 
+5. You can Create your own tweets and see tweets of other Users.
+
+### Note: This app is created solely for learning purpose and not for real use. It will be in development stage only.
+
+
+## Development Setup Steps/Notes
 
 1. Create Next.js App:
 
