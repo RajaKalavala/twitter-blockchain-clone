@@ -9,8 +9,15 @@ Hosted Link - https://twitter-web3-clone.vercel.app/
 4. Twitter Clone App will be open with your profile linked with your metamask account and your cypto wallet. 
 5. You can Create your own tweets and see tweets of other Users.
 
-### Note: This app is created solely for learning purpose and not for real use. It will be in development stage only.
+Note: This app is created solely for learning purpose and not for real use. It will be in development stage only.
 
+## Tech Stack
+1. NextJs 
+2. TailwindCSS 
+3. Sanity (For BE Content Management)
+4. Solidity (For Smart-contract)
+5. Metamask 
+6. Vercel (deployment)
 
 ## Development Setup Steps/Notes
 
@@ -22,13 +29,12 @@ Hosted Link - https://twitter-web3-clone.vercel.app/
 
 2. Setup Sanity:
 
-https://www.sanity.io/cleverprogrammer
+https://www.sanity.io/
 
 Run below commands:
 
 ```bash
    npm install -g @sanity/cli
-   sanity init --coupon cleverprogrammer
 ```
 
 To run the application:
